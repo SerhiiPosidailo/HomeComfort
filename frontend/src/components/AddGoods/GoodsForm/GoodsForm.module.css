@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form button {
+    border-radius: 25px;
+}
+
+.form input{
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.form select {
+    font-size: 15px;
+    border-radius: 20px;
+}

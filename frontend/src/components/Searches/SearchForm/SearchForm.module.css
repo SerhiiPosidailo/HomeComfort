@@ -1,0 +1,24 @@
+.input{
+    width: 22vw;
+    padding-left: 10px;
+    margin-right: 10px;
+    border-radius: 25px;
+    box-shadow: #45454562 3px 3px 3px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.buttonForm{
+    width: 7vw;
+    height: 3vh;
+    border-radius: 25px;
+    font-size: 13px;
+    box-shadow: rgb(77, 77, 77) 3px 3px;
+    margin-top: 0px;
+}

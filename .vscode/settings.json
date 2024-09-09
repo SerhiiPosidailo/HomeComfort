@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "mysql"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

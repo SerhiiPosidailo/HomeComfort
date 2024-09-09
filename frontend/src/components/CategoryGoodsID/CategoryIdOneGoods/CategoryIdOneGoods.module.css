@@ -1,0 +1,21 @@
+.OneBlock {
+    width: calc(20% - 2px);
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: #45454562 3px 3px 3px;
+    border-radius: 25px;
+    color: white;
+}
+
+.OneBlock div{
+    color: black;
+    margin-top: 3px;
+}
+
+img {
+    width: 195px;
+    height: 195px;
+}

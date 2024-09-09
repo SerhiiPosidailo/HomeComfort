@@ -1,0 +1,27 @@
+.goodsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.Button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Button button{
+    border-radius: 25px;
+    width: 80px;
+    transition: .3s;
+    font-size: 15px;
+}
+
+.Button span{
+    margin: 4px 10px;
+}
+
+.Button button:hover{
+    width: 90px;
+    transition: .3s;
+}

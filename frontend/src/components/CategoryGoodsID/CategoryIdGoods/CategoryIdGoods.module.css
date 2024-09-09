@@ -1,0 +1,27 @@
+.block {
+    display: flex;
+    flex-flow: row wrap; 
+}
+
+.ButtonCategory {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.ButtonCategory button{
+    border-radius: 25px;
+    width: 70px;
+    transition: .3s;
+    font-size: 15px;
+    
+}
+
+.ButtonCategory span{
+    margin: 0 10px 0 10px;
+}
+
+.ButtonCategory button:hover{
+    width: 80px;
+    transition: .3s;
+}

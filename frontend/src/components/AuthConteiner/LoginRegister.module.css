@@ -1,0 +1,20 @@
+.Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.input{
+    font-size: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+    box-shadow: #45454562 3px 3px 3px;
+}
+
+.Form button{
+    margin-top: 5px;
+    font-size: 17px;
+    border-radius: 15px;
+}

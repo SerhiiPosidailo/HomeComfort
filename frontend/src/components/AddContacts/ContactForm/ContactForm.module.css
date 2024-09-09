@@ -1,0 +1,15 @@
+.Form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Form button {
+    border-radius: 25px;
+}
+
+.Form input{
+    font-size: 15px;
+    border-radius: 20px;
+}

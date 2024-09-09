@@ -1,0 +1,17 @@
+/* --all category-- */
+.allCategory {
+    display: flex;
+    flex-flow: wrap row;
+}
+
+
+/* --one category-- */
+.category {
+    width: calc(24% - 2px);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 5%;
+    font-size: 30px;
+    border: 2mm ridge #45454562 ;
+    cursor: pointer;
+}
