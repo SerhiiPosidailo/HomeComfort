@@ -54,9 +54,9 @@ const GoodsForm = ({ setTrigger, goodsForUpdate, setGoodsForUpdate }) => {
         <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data" className={css.form}>
             {photoUrl && <img src={photoUrl} alt="Product" style={{ width: '100px', height: 'auto' }} />}
             <input type="file" {...register('photo')} />
-            <input type="text" placeholder={'name'} {...register('name')} />
-            <input type="text" placeholder={'price'} {...register('price')} />
-            <input type="text" placeholder={'description'} {...register('description')} />
+            <input type="text" placeholder={'Назва'} {...register('name')} />
+            <input type="text" placeholder={'Ціна'} {...register('price')} />
+            <input type="text" placeholder={'Опис'} {...register('description')} />
             <select {...register('category')} defaultValue="">
                 <option value="" disabled>
                     Категорія не вибрана

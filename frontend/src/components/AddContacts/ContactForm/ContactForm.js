@@ -18,9 +18,9 @@ const ContactForm = ({setTrigger}) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={css.Form}> 
-            <input type="text" placeholder={'Name'} {...register('name', { required: true })} />
+            <input type="text" placeholder={'Назва'} {...register('name', { required: true })} />
             {errors.name && <span>Це поле є обов'язковим</span>}
-            <input type="text" placeholder={'Link'} {...register('link', { required: true })} />
+            <input type="text" placeholder={'Посиланя'} {...register('link', { required: true })} />
             {errors.link && <span>Це поле є обов'язковим</span>}
             <button type="submit">Зберегти</button>
         </form>

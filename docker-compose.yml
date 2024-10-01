@@ -14,15 +14,6 @@ services:
     command:
       sh -c "python manage.py wait_db && python manage.py runserver 0.0.0.0:8000"
 
-  db:
-    image: mysql:8
-    volumes:
-      - ./mysql:/var/lib/mysql
-    ports:
-      - "3307:3306"
-    env_file:
-      - .env
-    restart: on-failure
 
   web:
     image: nginx:alpine

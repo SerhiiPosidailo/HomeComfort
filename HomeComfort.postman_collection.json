@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "b852ff5c-af95-4c03-a294-3a486e69ea32",
+		"name": "HomeComfort",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30969097"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{host}}/api/auth",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/me",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActivateToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/activate/:token",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"activate",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ToAdmin_ToUser",
+			"item": [
+				{
+					"name": "ToAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{host}}/api/users/:pk/to_admin",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":pk",
+								"to_admin"
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ToUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEzOTYwMzg0LCJpYXQiOjE3MTM5NTk3ODQsImp0aSI6ImZhOGRjZTY3NGUwYTQ1NTNiZTI3NTlmNzY4ODExZjA5IiwidXNlcl9pZCI6MTR9.SsE-yfOqSIvmWgm54-hdid_OlhdR4cA4FljsaWxHlEI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{host}}/api/users/:pk/to_user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":pk",
+								"to_user"
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AllList_ListCategory_ListGoods",
+			"item": [
+				{
+					"name": "AllList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{host}}/api/category/goods",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"goods"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Plaids",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllListCaterory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/category",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListGoods",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{host}}/api/goods",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"goods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GoodsByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/category/:pk/goods",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"category",
+								":pk",
+								"goods"
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GoodsRetriveUpdateDestroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/goods/:pk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"goods",
+								":pk"
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CatrgoryRetrieveUpdateDestroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/category/:pk/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"category",
+								":pk",
+								"delete"
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreataAddGoods",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3Nzc5MTIxLCJpYXQiOjE3Mjc3NzczMjEsImp0aSI6IjRiNzUyOGFjNDU4MzRlYWRiOTVkZTEzYTYwZTkyOTY4IiwidXNlcl9pZCI6MX0.7WdjW_fbk32PnWfG3Iuk5RCTReHQdsu67ygKejd1QmY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/category/:pk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"category",
+								":pk"
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/contact",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productCare",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/product_care",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"product_care"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postContact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/contact",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContactRetriveUpdateDestroy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/contact/:pk",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"contact",
+						":pk"
+					],
+					"variable": [
+						{
+							"key": "pk",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

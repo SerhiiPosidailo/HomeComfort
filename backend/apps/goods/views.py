@@ -1,5 +1,5 @@
 from rest_framework.generics import ListAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAdminUser
 
 from apps.goods.filters import GoodsFilter
 from apps.goods.models import GoodsModel
@@ -22,4 +22,4 @@ class GoodsView(ListAPIView):
 class GoodsRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
     queryset = GoodsModel.objects.all()
     serializer_class = GoodsSerializer
-    permission_classes = (AllowAny, ) 
+    permission_classes = (IsAdminUser, ) 
