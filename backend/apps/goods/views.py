@@ -22,4 +22,8 @@ class GoodsView(ListAPIView):
 class GoodsRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
     queryset = GoodsModel.objects.all()
     serializer_class = GoodsSerializer
+<<<<<<< HEAD
     permission_classes = (AllowAny, ) 
+=======
+    permission_classes = (AllowAny, ) 
+>>>>>>> b01134afaff2b2e99e644b52985fca630c91bb95

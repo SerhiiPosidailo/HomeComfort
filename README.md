@@ -30,3 +30,4 @@ cp .env.example .env
 docker-compose up --build
 
 Відвідайте http://localhost для доступу до інтерфейсу.
+Або http://localhost/api/doc для відвіданя документації
