@@ -22,4 +22,4 @@ class GoodsView(ListAPIView):
 class GoodsRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
     queryset = GoodsModel.objects.all()
     serializer_class = GoodsSerializer
-    permission_classes = (IsAdminUser, ) 
+    permission_classes = (AllowAny, ) 

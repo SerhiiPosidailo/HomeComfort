@@ -12,6 +12,11 @@ class Regex(Enum):
         'Only alphanumeric 2-20 characters.'
     )
 
+    PASS = (
+        r'[0-9a-zA-Z]{5,}',
+        'Only upper and lower case letters and numbers'
+    )
+
     def __init__(self, pattern: str, msg: str):
         self.pattern = pattern
         self.msg = msg

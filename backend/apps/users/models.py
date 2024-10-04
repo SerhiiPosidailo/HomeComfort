@@ -13,7 +13,7 @@ class UserModel(AbstractBaseUser, PermissionsMixin, BaseModel):
         db_table = 'auth_user'
 
     email = models.EmailField(unique=True, validators=[V.RegexValidator(*Regex.EMAIL.value)])
-    password = models.CharField(max_length=128)
+    password = models.CharField(max_length=300, validators=[V.RegexValidator(*Regex.PASS.value)])
     username = models.CharField(unique=True, max_length=50)
     is_active = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
